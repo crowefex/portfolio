@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    body {
+      background: url("https://raw.githubusercontent.com/crowefex/Ptfo-assets/main/BG.png") no-repeat center center;
+      background-size: cover;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 50%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .logo-circle {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid white;
+      background: white;
+    }
+
+    .logo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .responsive-img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .responsive-video {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .instagram-embed {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .box {
+      background: red;
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 60px 0 20px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    .box p {
+      margin: 0 0 10px;
+      font-size: 1.2em;
+      text-align: left;
+    }
+
+    .box ul {
+      list-style-type: none;
+      padding-left: 0;
+      text-align: left;
+      margin: 0;
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <img src="https://raw.githubusercontent.com/crowefex/Ptfo-assets/main/crowBB.png" class="responsive-img">  
+    <div class="logo-circle">
+      <img src="https://raw.githubusercontent.com/crowefex/Ptfo-assets/main/crowfx.png" class="responsive-img">
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Introduction -->
+    <div class="box">
+      <ul>
+        <li class="fade-in-up">Hi there, I'm a cinematic editor and contemporary reels/TikTok editor who you're looking for.</li>
+        <li class="fade-in-up">I have edited some S-graded movies.</li>
+        <li class="fade-in-up">I do reels with contemporary effects.</li>
+        <li class="fade-in-up">I have knowledge in color grading and can trim raw footage into custom content without losing context.</li>
+        <li class="fade-in-up">I make good thumbnail images by the way.</li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="box">
+      <p><strong>For Contact:</strong></p>
+      <ul>
+        <li class="fade-in-up">Email: <a href="mailto:crowefex@gmail.com">crowefex@gmail.com</a></li>
+        <li class="fade-in-up">Instagram: <a href="https://www.instagram.com/crow.efex?igsh=MTM2NGxqdXMzMzM5YQ==" target="_blank">@crow.efex</a></li>
+        <li class="fade-in-up">Facebook: <a href="https://www.facebook.com/share/15T1i4qWGB/" target="_blank">@crow.efex</a></li>
+        <li class="fade-in-up">YouTube: <a href="https://youtube.com/@user-crow-fkwrld?si=eqt9Zr7imw1uBb16" target="_blank">@crowefex</a></li>
+      </ul>
+    </div>
+
+    <!-- Work Samples -->
+    <div class="box">
+      <p><strong>Work Samples:</strong></p>
+
+      <!-- YouTube Videos -->
+      <iframe class="responsive-video" width="100%" height="315"
+        src="https://www.youtube.com/embed/D-fWjuT_QC4"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+      <video controls width="100%" style="border-radius: 10px;">
+  <source src="https://raw.githubusercontent.com/crowefex/Ptfo-assets/main/BRBA%20Final.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+      <!-- Images -->
+      <img src="https://raw.githubusercontent.com/crowefex/Ptfo-assets/main/BRBA12.png" alt="Work Image 1" class="fade-in-up responsive-img" style="width: 100%; margin-top: 10px; border-radius: 10px;" />
+
+       <img src="https://raw.githubusercontent.com/crowefex/Ptfo-assets/main/Banner5.jpg" alt="Work Image 1" class="fade-in-up responsive-img" style="width: 100%; margin-top: 10px; border-radius: 10px;" />
+    </div>
+  </div>
+
+  <script>
+    // Trigger fade-in-up animation on load
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.fade-in-up').forEach(el => {
+        el.classList.remove('fade-in-up');
+        setTimeout(() => {
+          el.classList.add('fade-in-up');
+        }, 10);
+      });
+    });
+  </script>
+</body>
+</html>
